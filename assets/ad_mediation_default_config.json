@@ -1,0 +1,1015 @@
+{
+  "placements": [
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 3,
+          "unitid": "w6byaylcw4"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 2,
+          "unitid": "e9a3efe6-318b-4c0e-a00f-93542f5f7344"
+        }
+      ],
+      "format": "native",
+      "id": "webview_recommand_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"format\":\"banner\",\"banner_size\":\"mrec\"}",
+          "platform": "vungle",
+          "priority": 5,
+          "unitid": "VIDEO_DETAIL_PAGE_AD_MREC-0507289"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 4,
+          "unitid": "w77ujy0sg8"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 3,
+          "unitid": "833c29af-9eb4-44f4-8925-8c5213437a93"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 2,
+          "unitid": "VIDEO_DETAIL_PAGE_AD_NATIVE-5905394"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "pangle",
+          "priority": 0,
+          "unitid": "980631975"
+        }
+      ],
+      "format": "native",
+      "id": "video_detail_page_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "pangle",
+          "priority": 5,
+          "unitid": "980631939"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 4,
+          "unitid": "q9wy7wh2xp"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 3,
+          "unitid": "TASK_ADD_INTERS_NORMAL_AD_1011-0212183"
+        },
+        {
+          "count": 1,
+          "ext": "{ \t\"dimensions\": \"320x480\", \t\"ad_choices\": \"lt\" }",
+          "platform": "flatads",
+          "priority": 2,
+          "unitid": "11d2ede0-231b-11ef-ae10-d3c819a589f8"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "mintegral",
+          "priority": 1,
+          "unitid": "3056842"
+        }
+      ],
+      "format": "interstitial",
+      "id": "task_add_inters_normal_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"format\":\"banner\",\"banner_size\":\"mrec\"}",
+          "platform": "vungle",
+          "priority": 5,
+          "unitid": "TASK_ADD_FUNC_NORMAL_AD_MREC-2167923"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 4,
+          "unitid": "c9a05oy504"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"lt\"}",
+          "platform": "adshark",
+          "priority": 3,
+          "unitid": "99bed530-6aa5-11ea-bac6-891a6d5328ea"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 2,
+          "unitid": "TASK_ADD_FUNC_NORMAL_AD_NATIVE-3173969"
+        }
+      ],
+      "format": "native",
+      "id": "task_add_func_normal_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 3,
+          "unitid": "v7i2wpmy8n"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 2,
+          "unitid": "6e740b90-7b15-11ea-827d-c36a2c8446bf"
+        }
+      ],
+      "format": "native",
+      "id": "search_feed_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"format\":\"banner\",\"banner_size\":\"mrec\"}",
+          "platform": "vungle",
+          "priority": 5,
+          "unitid": "SEARCH_BACK_AD_MREC-4784999"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 4,
+          "unitid": "r6swck9h4i"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 3,
+          "unitid": "08e75d40-82ea-11ea-b58b-bb0e2ba1dd02"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 2,
+          "unitid": "SEARCH_BACK_AD_NATIVE-4109501"
+        }
+      ],
+      "format": "native",
+      "id": "search_back_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"format\":\"banner\",\"banner_size\":\"banner\"}",
+          "platform": "vungle",
+          "priority": 5,
+          "unitid": "NAV_PAGE_AD-7681255"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 4,
+          "unitid": "w2cd4x39ff"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 3,
+          "unitid": "12679b0d-13c3-4329-b57a-075a7b80074c"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 2,
+          "unitid": "NAV_PAGE_AD_NATIVE-2090059"
+        }
+      ],
+      "format": "native",
+      "id": "nav_page_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "pangle",
+          "priority": 5,
+          "unitid": "980631961"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 4,
+          "unitid": "q266spvxtg"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 3,
+          "unitid": "LOCALPLAY_INTERS_AD-0643985"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "mintegral",
+          "priority": 2,
+          "unitid": "3081162"
+        },
+        {
+          "count": 1,
+          "ext": "{ \"dimensions\": \"320x480\", \t\"ad_choices\": \"lt\" }",
+          "platform": "flatads",
+          "priority": 1,
+          "unitid": "ce0296a0-231b-11ef-a38d-0d2c5938fc43"
+        }
+      ],
+      "format": "interstitial",
+      "id": "localplay_inters_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"format\":\"banner\",\"banner_size\":\"mrec\"}",
+          "platform": "vungle",
+          "priority": 4,
+          "unitid": "HOME_FEED_PAGE_AD_MREC-5243584"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 3,
+          "unitid": "a2o8exps53"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 2,
+          "unitid": "fd7169ff-d51f-4203-b22c-3901769d96b5"
+        }
+      ],
+      "format": "native",
+      "id": "home_feed_page_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 5,
+          "unitid": "r7vvpdfh3w"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 4,
+          "unitid": "FULLSCREEN_TASK_AD_00-9408767"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "mintegral",
+          "priority": 3,
+          "unitid": "3056844"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "pangle",
+          "priority": 2,
+          "unitid": "980631949"
+        },
+        {
+          "count": 1,
+          "ext": "{ \"dimensions\": \"320x480\", \t\"ad_choices\": \"lt\" }",
+          "platform": "flatads",
+          "priority": 0,
+          "unitid": "a1ee1a80-231b-11ef-9427-f94191213944"
+        }
+      ],
+      "format": "interstitial",
+      "id": "fullscreen_task_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 0,
+          "ext": "{\"format\":\"banner\",\"banner_size\":\"mrec\"}",
+          "platform": "vungle",
+          "priority": 5,
+          "unitid": "EXTERAL_TASKADD_AD-2584290"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 4,
+          "unitid": "b522sy4lok"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 3,
+          "unitid": "78c0b96c-5d9e-4da4-8507-94eb348c4f66"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 2,
+          "unitid": "EXTERAL_TASKADD_AD_NATIVE-9485452"
+        }
+      ],
+      "format": "native",
+      "id": "exteral_taskadd_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"format\":\"banner\",\"banner_size\":\"mrec\"}",
+          "platform": "vungle",
+          "priority": 6,
+          "unitid": "EXIT_POPUP_AD_MREC-4554867"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 5,
+          "unitid": "p9dra2028o"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 4,
+          "unitid": "528b8b87-7ea0-42d2-900b-229c4d38f027"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 3,
+          "unitid": "EXIT_POPUP_AD_NATIVE-1474209"
+        }
+      ],
+      "format": "native",
+      "id": "exit_popup_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 1,
+          "unitid": "ca1cd710-c809-11ea-87e5-ff8709aa02ac"
+        }
+      ],
+      "format": "native",
+      "id": "download_video_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"format\":\"banner\",\"banner_size\":\"banner\"}",
+          "platform": "vungle",
+          "priority": 5,
+          "unitid": "DOWNLOAD_PAGE_AD-9009352"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 4,
+          "unitid": "c4wpjknheo"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 3,
+          "unitid": "ad07e6ff-7258-48dd-9d15-c62da4d9551a"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 2,
+          "unitid": "DOWNLOAD_PAGE_AD_NATIVE-9258968"
+        }
+      ],
+      "format": "native",
+      "id": "download_page_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 0,
+          "unitid": "1d1a6710-c806-11ea-ac13-f37185fe9959"
+        }
+      ],
+      "format": "native",
+      "id": "download_music_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "pangle",
+          "priority": 3,
+          "unitid": "980631964"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 2,
+          "unitid": "NAV_EXIT_INTERS_AD-6954762"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "mintegral",
+          "priority": 1,
+          "unitid": "3081172"
+        },
+        {
+          "count": 1,
+          "ext": "{ \t\"dimensions\": \"320x480\", \t\"ad_choices\": \"lt\" }",
+          "platform": "flatads",
+          "priority": 0,
+          "unitid": "e6d14be0-231b-11ef-9427-f94191213944"
+        }
+      ],
+      "format": "interstitial",
+      "id": "ytb_pullup_exit_inters_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 3,
+          "unitid": "d7e672d0-7330-11ea-8feb-2f38ddb005df"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 2,
+          "unitid": "WARNING_AD_NATIVE-9606519"
+        }
+      ],
+      "format": "native",
+      "id": "warning_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"lt\"}",
+          "platform": "adshark",
+          "priority": 0,
+          "unitid": "e42d1b30-637b-11ea-bea8-67281bcfec0d"
+        }
+      ],
+      "format": "native",
+      "id": "video_related_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"lt\"}",
+          "platform": "adshark",
+          "priority": 1,
+          "unitid": "793b72d0-b1cb-11ed-bc56-13fd5e438061"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "pangle",
+          "priority": 0,
+          "unitid": "980631991"
+        }
+      ],
+      "format": "native",
+      "id": "video_detail_feed_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 4,
+          "unitid": "TASK_ADD_INTERS_ADULT_AD-3303963"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "mintegral",
+          "priority": 3,
+          "unitid": "3081168"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "pangle",
+          "priority": 2,
+          "unitid": "980631962"
+        },
+        {
+          "count": 1,
+          "ext": "{ \"dimensions\": \"320x480\", \t\"ad_choices\": \"lt\" }",
+          "platform": "flatads",
+          "priority": 1,
+          "unitid": "dbb8df70-231b-11ef-ae10-d3c819a589f8"
+        }
+      ],
+      "format": "interstitial",
+      "id": "task_add_inters_adult_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"lt\"}",
+          "platform": "adshark",
+          "priority": 3,
+          "unitid": "a8f77840-6aa5-11ea-bac6-891a6d5328ea"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 2,
+          "unitid": "TASK_ADD_FUNC_ADULT_AD_NATIVE-2250042"
+        }
+      ],
+      "format": "native",
+      "id": "task_add_func_adult_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 0,
+          "unitid": "v59fu5pvnb"
+        }
+      ],
+      "format": "splashscreen",
+      "id": "splashscreen_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"lt\"}",
+          "platform": "adshark",
+          "priority": 0,
+          "unitid": "538caf80-7b15-11ea-b58b-bb0e2ba1dd02"
+        }
+      ],
+      "format": "native",
+      "id": "search_related_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"format\":\"banner\",\"banner_size\":\"mrec\"}",
+          "platform": "vungle",
+          "priority": 4,
+          "unitid": "SEARCH_HISTORY_AD_MREC-9729046"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 3,
+          "unitid": "9101f830-ae9c-11ed-9967-8731605830bb"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 2,
+          "unitid": "SEARCH_HISTORY_AD_NATIVE-7670459"
+        }
+      ],
+      "format": "native",
+      "id": "search_history_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "pangle",
+          "priority": 4,
+          "unitid": "980631957"
+        },
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 3,
+          "unitid": "SEARCH_EXIT_INTERS_AD_NATIVE_1011-8796187"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "mintegral",
+          "priority": 2,
+          "unitid": "3081154"
+        },
+        {
+          "count": 1,
+          "ext": "{ \"dimensions\": \"320x480\", \t\"ad_choices\": \"lt\" }",
+          "platform": "flatads",
+          "priority": 0,
+          "unitid": "b12202a0-231b-11ef-89e2-8ba604060dce"
+        }
+      ],
+      "format": "interstitial",
+      "id": "search_exit_inters_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "banner_width_in_dp:320;banner_height_in_dp:100",
+          "platform": "adshark",
+          "priority": 0,
+          "unitid": "7212707c-2f37-45d2-b849-edb5b1609cc5"
+        }
+      ],
+      "format": "banner",
+      "id": "search_banner_ad(320x100)",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"format\": \"native_video_front\",   \"roll_ad_count\": 1,     \"roll_ad_time\": 120}",
+          "platform": "huawei",
+          "priority": 1,
+          "unitid": "q6ysu1bb9e"
+        },
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rt\"}",
+          "platform": "adshark",
+          "priority": 0,
+          "unitid": "0cddeff0-8618-11ea-81a4-250d67a9d91b"
+        }
+      ],
+      "format": "native",
+      "id": "pre_rolls_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "adshark",
+          "priority": 0,
+          "unitid": "5b641f80-53ad-11ee-a99c-61675a449a12"
+        }
+      ],
+      "format": "native",
+      "id": "nav_page_ad_adult",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 3,
+          "unitid": "NAV_EXIT_INTERS_AD_IN-9285634"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "mintegral",
+          "priority": 2,
+          "unitid": "3081148"
+        },
+        {
+          "count": 1,
+          "ext": "{ \"dimensions\": \"320x480\", \t\"ad_choices\": \"lt\" }",
+          "platform": "flatads",
+          "priority": 0,
+          "unitid": "bee013a0-231b-11ef-89e2-8ba604060dce"
+        }
+      ],
+      "format": "interstitial",
+      "id": "nav_exit_inters_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rb\"}",
+          "platform": "adshark",
+          "priority": 2,
+          "unitid": "2d067e10-ee86-11ea-85ea-e5cb102f1483"
+        }
+      ],
+      "format": "native",
+      "id": "nav_bottom_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "banner_width_in_dp:320;banner_height_in_dp:100",
+          "platform": "adshark",
+          "priority": 0,
+          "unitid": "5b5ea4db-ead9-4f27-9ed8-3b808c7ac216"
+        }
+      ],
+      "format": "banner",
+      "id": "nav_banner_ad(320x100)",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "adshark",
+          "priority": 1,
+          "unitid": "808eda10-b412-11ed-bc9a-f15dabe0f49c"
+        }
+      ],
+      "format": "native",
+      "id": "native_backup_ad_two",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "adshark",
+          "priority": 0,
+          "unitid": "c0cd1470-b412-11ed-bc9a-f15dabe0f49c"
+        }
+      ],
+      "format": "native",
+      "id": "native_backup_ad_three",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "adshark",
+          "priority": 1,
+          "unitid": "6dbb5d00-b412-11ed-bc9a-f15dabe0f49c"
+        }
+      ],
+      "format": "native",
+      "id": "native_backup_ad_one",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "pangle",
+          "priority": 4,
+          "unitid": "980750959"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "mintegral",
+          "priority": 3,
+          "unitid": "3081176"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 1,
+          "unitid": "INTERS_BACKUP_AD_ONE-2746450"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "adshark",
+          "priority": 0,
+          "unitid": "e6cba470-b412-11ed-8b88-a5e705cde7bb"
+        }
+      ],
+      "format": "interstitial",
+      "id": "inters_backup_ad_one",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "banner_width_in_dp:300;banner_height_in_dp:250",
+          "platform": "adshark",
+          "priority": 0,
+          "unitid": "b0529091-1887-4b21-8ecb-cb277191f393"
+        }
+      ],
+      "format": "banner",
+      "id": "image_banner_ad（300x250)",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 3,
+          "unitid": "EXIT_VIDEO_FILE_INTER_AD-3414340"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "pangle",
+          "priority": 2,
+          "unitid": "981575482"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "flatads",
+          "priority": 1,
+          "unitid": "369155c0-8c63-11ef-95f9-4d04b9162462"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "mintegral",
+          "priority": 0,
+          "unitid": "3769254"
+        }
+      ],
+      "format": "interstitial",
+      "id": "exit_video_file_inter_ad",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "",
+          "platform": "vungle",
+          "priority": 4,
+          "unitid": "CLEAN_UP_INTER-9488893"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "pangle",
+          "priority": 3,
+          "unitid": "981139988"
+        },
+        {
+          "count": 0,
+          "ext": "",
+          "platform": "huawei",
+          "priority": 2,
+          "unitid": "j6hgykedre"
+        },
+        {
+          "count": 1,
+          "ext": "{ \t\"dimensions\": \"320x480\", \t\"ad_choices\": \"lt\" }",
+          "platform": "flatads",
+          "priority": 0,
+          "unitid": "f462f5b0-231b-11ef-ae10-d3c819a589f8"
+        }
+      ],
+      "format": "interstitial",
+      "id": "clean_up_inter",
+      "sync": false
+    },
+    {
+      "ad_requests": [
+        {
+          "count": 1,
+          "ext": "{\"ad_choices\":\"rt\"}",
+          "platform": "adshark",
+          "priority": 1,
+          "unitid": "15375140-7331-11ea-a685-2964140a30f0"
+        }
+      ],
+      "format": "native",
+      "id": "browser_error_ad",
+      "sync": false
+    }
+  ],
+  "versioncode": 888888,
+  "condition": [
+    {
+      "id": 3429,
+      "aid": 153,
+      "versioncode": 888888,
+      "condition": "[{\"type\":\"appver\",\"filter_detail\":\"5.2741\",\"filter_type\":\"higher\"}]",
+      "desc": "【full 1029】",
+      "begin_time": 0,
+      "end_time": 0,
+      "status": 1,
+      "ctime": 1730186924,
+      "utime": 1730363681,
+      "priority": 63,
+      "fingerprint": "7666f575ec4fff8a4ffa8eb77e24e8fc"
+    }
+  ]
+}

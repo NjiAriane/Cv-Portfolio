@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlatformInfo>
+
+    <Facebook
+        AppKey="241827739336649"
+        AppSecret="387d2d8d3956b5842299010a0769f3a3"
+        Enable="true"
+        />
+
+</PlatformInfo>
