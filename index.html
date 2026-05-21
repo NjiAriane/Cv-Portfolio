@@ -1,472 +1,885 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Nji Ariane Ruth - DevOps Engineer</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <style>
-        :root {
-            --bg: #080c10;
-            --surface: #0e1419;
-            --card: #131920;
-            --border: #1e2a35;
-            --accent: #00d4ff;
-            --accent2: #00ff94;
-            --text: #e8f4f8;
-            --muted: #5a7a8a;
-            --light: #a8c5d0;
-        }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nji Menyonga Ariane Ruth | DevOps Engineer</title>
+<meta name="description" content="Nji Menyonga Ariane Ruth is a Junior DevOps Engineer based in Cameroon, specialising in CI/CD, Docker, Kubernetes, Terraform, and cloud infrastructure."/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#faf8f5;color:#2c1810;line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:#c8602a;border-radius:2px;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+/* ── PALETTE: warm terracotta/brown, cream ── */
+:root{
+  --rust:#c8602a;
+  --rust-dark:#a84e20;
+  --rust-light:#f5e8df;
+  --rust-mid:#e07849;
+  --cream:#faf8f5;
+  --cream2:#f2ede7;
+  --dark:#2c1810;
+  --mid:#5c3d2e;
+  --muted:#8a6555;
+  --border:#e8ddd5;
+  --border2:#d4c4b8;
+  --white:#ffffff;
+  --shadow:0 2px 20px rgba(200,96,42,.08);
+  --shadow-lg:0 8px 40px rgba(200,96,42,.16);
+}
 
-        body {
-            font-family: 'Syne', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            overflow-x: hidden;
-        }
+/* ── NAV ── */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:68px;background:rgba(250,248,245,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+.navbar.scrolled{box-shadow:0 2px 20px rgba(44,24,16,.1);}
+.nav-brand{font-weight:900;font-size:1rem;color:var(--dark);letter-spacing:-.02em;}
+.nav-brand span{color:var(--rust);}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{display:block;padding:8px 12px;font-size:.78rem;font-weight:500;color:var(--muted);border-radius:6px;transition:all .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--rust);background:var(--rust-light);}
+.nav-actions{display:flex;align-items:center;gap:10px;}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:8px;font-size:.82rem;font-weight:600;cursor:pointer;border:none;transition:all .22s;text-decoration:none;}
+.btn-primary{background:var(--rust);color:#fff;}
+.btn-primary:hover{background:var(--rust-dark);transform:translateY(-1px);box-shadow:0 4px 16px rgba(200,96,42,.35);}
+.btn-outline{background:transparent;color:var(--rust);border:1.5px solid var(--rust);}
+.btn-outline:hover{background:var(--rust);color:#fff;transform:translateY(-1px);}
+.btn-sm{padding:7px 15px;font-size:.77rem;}
+.btn-lg{padding:13px 28px;font-size:.9rem;}
+.btn-white{background:#fff;color:var(--rust);}
+.btn-white:hover{background:var(--rust-light);}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.3);}
+.btn-ghost:hover{background:rgba(255,255,255,.26);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:.3s;}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--border);padding:16px 5vw;flex-direction:column;gap:4px;z-index:999;box-shadow:0 8px 24px rgba(44,24,16,.1);}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:10px 14px;font-size:.9rem;font-weight:500;color:var(--muted);border-radius:6px;}
+.mobile-menu a:hover{color:var(--rust);background:var(--rust-light);}
 
-        /* NAV */
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 100;
-            padding: 20px 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(8,12,16,0.9);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-        }
-        .nav-logo { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--accent); letter-spacing: 2px; }
-        .nav-links { display: flex; gap: 40px; list-style: none; }
-        .nav-links a { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); text-decoration: none; letter-spacing: 2px; text-transform: uppercase; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--accent); }
+/* ── HERO: fullscreen photo background like Simone ── */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;align-items:flex-end;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background-color:#c4a090;
+}
+.hero-bg img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  display:block;
+  opacity:0.92;
+}
+/* gradient overlay: heavy on left (text side), fades to transparent on right so face shows */
+.hero-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(
+    100deg,
+    rgba(26,10,5,.78) 0%,
+    rgba(26,10,5,.55) 40%,
+    rgba(26,10,5,.15) 70%,
+    rgba(26,10,5,.0) 100%
+  );
+}
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;max-width:1200px;margin:0 auto;
+  padding:160px 5vw 80px;
+}
+.hero-eyebrow{
+  font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);margin-bottom:14px;
+}
+.hero h1{
+  font-size:clamp(3.2rem,8vw,6.5rem);
+  font-weight:900;color:#fff;
+  line-height:1.0;letter-spacing:-.04em;
+  margin-bottom:22px;
+}
+.hero h1 .hello{color:var(--rust-mid);display:block;}
+.hero h1 .name{color:#fff;display:block;}
+.hero-desc{
+  font-size:clamp(.88rem,1.3vw,1rem);
+  color:rgba(255,255,255,.72);
+  max-width:480px;line-height:1.8;margin-bottom:10px;
+}
+.hero-meta{font-size:.78rem;color:rgba(255,255,255,.45);margin-bottom:32px;line-height:1.8;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px;}
+.hero-socials{display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+.hero-socials-label{font-size:.72rem;color:rgba(255,255,255,.45);margin-right:4px;}
+.social-icon{width:38px;height:38px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.75);font-size:1rem;transition:all .2s;}
+.social-icon:hover{background:var(--rust);border-color:var(--rust);color:#fff;transform:translateY(-2px);}
 
-        /* HERO */
-        .hero {
-            min-height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            padding: 120px 60px 80px;
-            gap: 60px;
-            position: relative;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 20%; right: 0;
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(0,212,255,0.06) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .hero-tag {
-            font-family: 'DM Mono', monospace;
-            font-size: 11px; color: var(--accent);
-            letter-spacing: 4px; text-transform: uppercase;
-            margin-bottom: 20px;
-            display: flex; align-items: center; gap: 10px;
-        }
-        .hero-tag::before { content: ''; width: 30px; height: 1px; background: var(--accent); }
-        .hero h1 { font-size: clamp(42px, 5vw, 72px); font-weight: 800; line-height: 1.05; letter-spacing: -2px; margin-bottom: 24px; }
-        .hero h1 span { color: transparent; -webkit-text-stroke: 1px var(--accent); }
-        .hero-desc { font-size: 16px; color: var(--light); line-height: 1.8; margin-bottom: 40px; max-width: 480px; }
-        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+/* ── AVAILABILITY / PROOF ── */
+.avail-section{background:var(--rust);padding:70px 5vw;}
+.avail-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.avail-eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;}
+.avail-inner h2{font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:800;color:#fff;line-height:1.3;margin-bottom:12px;}
+.avail-inner > div > p{font-size:.87rem;color:rgba(255,255,255,.74);line-height:1.82;margin-bottom:22px;}
+.avail-list{display:flex;flex-direction:column;gap:9px;margin-bottom:26px;}
+.avail-item{display:flex;align-items:center;gap:10px;font-size:.85rem;color:rgba(255,255,255,.84);}
+.avail-item i{color:#fbbf24;font-size:.88rem;}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;}
+.stat-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:18px 14px;text-align:center;}
+.stat-num{font-size:1.8rem;font-weight:900;color:#fff;line-height:1;margin-bottom:5px;}
+.stat-num.sm{font-size:1rem;margin-top:6px;line-height:1.3;}
+.stat-label{font-size:.65rem;font-weight:700;color:rgba(255,255,255,.65);letter-spacing:.07em;text-transform:uppercase;margin-bottom:4px;}
+.stat-desc{font-size:.67rem;color:rgba(255,255,255,.42);line-height:1.5;}
 
-        .btn-primary {
-            padding: 14px 32px; background: var(--accent); color: #000;
-            font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px;
-            border: none; cursor: pointer; text-decoration: none; letter-spacing: 1px;
-            transition: all 0.2s;
-            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
-        }
-        .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
+/* ── SECTION COMMONS ── */
+section{padding:90px 5vw;}
+.section-bg{background:var(--cream2);}
+.container{max-width:1120px;margin:0 auto;}
+.section-label{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:10px;}
+.section-title{font-size:clamp(1.8rem,3.2vw,2.7rem);font-weight:800;color:var(--dark);letter-spacing:-.03em;line-height:1.15;margin-bottom:12px;}
+.section-title span{color:var(--rust);}
+.section-sub{font-size:.9rem;color:var(--muted);max-width:560px;line-height:1.8;}
+.text-center{text-align:center;}
+.text-center .section-sub,.text-center .section-label{margin-left:auto;margin-right:auto;}
+.divider-line{width:44px;height:3px;background:var(--rust);border-radius:2px;margin:12px 0 0;}
+.text-center .divider-line{margin:12px auto 0;}
 
-        .btn-secondary {
-            padding: 14px 32px; background: transparent; color: var(--accent);
-            font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px;
-            border: 1px solid var(--accent); cursor: pointer; text-decoration: none; letter-spacing: 1px;
-            transition: all 0.2s;
-            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
-        }
-        .btn-secondary:hover { background: rgba(0,212,255,0.08); transform: translateY(-2px); }
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:start;max-width:1120px;margin:0 auto;}
+.about-photo-card{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);}
+.about-photo-card img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;display:block;}
+.about-photo-fallback{width:100%;aspect-ratio:3/4;background:var(--rust-light);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--rust);}
+.about-photo-fallback i{font-size:3.5rem;}
+.about-photo-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(44,24,16,.88));padding:24px 20px 20px;}
+.about-photo-name{font-size:1rem;font-weight:700;color:#fff;margin-bottom:2px;}
+.about-photo-role{font-size:.72rem;color:rgba(255,255,255,.7);}
+.tag-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.tag-pill{font-size:.6rem;font-weight:600;padding:3px 9px;border-radius:20px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.2);}
+.about-text p{font-size:.88rem;color:#4a3028;line-height:1.9;margin-bottom:1rem;}
+.about-text p strong{color:var(--dark);font-weight:600;}
+.about-text .hl{color:var(--rust);font-weight:500;}
+.internship-card{background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1.5px solid #fbbf24;border-radius:12px;padding:16px 18px;margin:18px 0;}
+.ic-eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#92400e;margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+.ic-title{font-size:.9rem;font-weight:700;color:#1c1917;margin-bottom:4px;}
+.ic-detail{font-size:.75rem;color:#78350f;line-height:1.65;}
+.ic-detail strong{color:#1c1917;}
+.meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0;}
+.meta-item{background:var(--cream2);border-radius:10px;padding:13px 15px;border-left:3px solid var(--rust);}
+.meta-k{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+.meta-v{font-size:.82rem;font-weight:600;color:var(--dark);}
+.mini-stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid var(--border);}
+.mini-stat .mn{font-size:1.5rem;font-weight:900;color:var(--rust);line-height:1;}
+.mini-stat .ml{font-size:.67rem;color:var(--muted);margin-top:2px;}
+.about-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;}
 
-        .hero-image-wrap { display: flex; justify-content: center; align-items: center; position: relative; }
-        .hero-image-wrap::before {
-            content: ''; position: absolute;
-            width: 340px; height: 340px;
-            border: 1px solid rgba(0,212,255,0.2); border-radius: 50%;
-            animation: pulse 4s ease-in-out infinite;
-        }
-        .hero-image-wrap::after {
-            content: ''; position: absolute;
-            width: 390px; height: 390px;
-            border: 1px solid rgba(0,212,255,0.07); border-radius: 50%;
-            animation: pulse 4s ease-in-out infinite 1s;
-        }
-        @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.05); opacity: 0.4; } }
-        .hero-img { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); position: relative; z-index: 1; }
+/* ── SKILLS ── */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;}
+.skill-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px;transition:all .25s;}
+.skill-card:hover{border-color:var(--rust);box-shadow:var(--shadow);transform:translateY(-2px);}
+.skill-card-title{font-size:.78rem;font-weight:700;color:var(--dark);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+.skill-card-title i{color:var(--rust);}
+.skill-tags{display:flex;flex-wrap:wrap;gap:5px;}
+.stag{font-size:.62rem;padding:3px 8px;border-radius:6px;background:var(--rust-light);color:var(--rust);font-weight:600;}
 
-        /* STATS */
-        .stats-bar {
-            background: var(--surface);
-            border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-            padding: 30px 60px;
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
-        }
-        .stat { text-align: center; padding: 10px; border-right: 1px solid var(--border); }
-        .stat:last-child { border-right: none; }
-        .stat-num { font-size: 32px; font-weight: 800; color: var(--accent); display: block; }
-        .stat-label { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; display: block; }
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:34px;max-width:820px;margin:0 auto;}
+.timeline::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--border2);}
+.tl-item{position:relative;margin-bottom:40px;opacity:0;transform:translateX(-14px);transition:all .5s ease;}
+.tl-item.visible{opacity:1;transform:translateX(0);}
+.tl-dot{position:absolute;left:-31px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:2.5px solid var(--rust);z-index:1;}
+.tl-dot.upcoming{border-color:#f59e0b;background:#fffbeb;}
+.tl-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:22px 24px;transition:box-shadow .2s;}
+.tl-card:hover{box-shadow:var(--shadow);}
+.tl-card.upcoming-card{border-color:#f59e0b;background:linear-gradient(135deg,#fffbeb,#fff);}
+.tl-header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:5px;}
+.tl-role{font-size:1rem;font-weight:700;color:var(--dark);}
+.tl-date{font-size:.67rem;font-weight:600;background:var(--rust-light);color:var(--rust);padding:3px 10px;border-radius:20px;white-space:nowrap;}
+.tl-date.ud{background:#fef3c7;color:#92400e;}
+.tl-org{font-size:.8rem;color:var(--rust);font-weight:600;margin-bottom:13px;}
+.tl-org.uo{color:#d97706;}
+.tl-points{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.tl-points li{font-size:.8rem;color:#5c3d2e;line-height:1.75;padding-left:14px;position:relative;}
+.tl-points li::before{content:'▸';position:absolute;left:0;color:var(--rust);font-size:.72rem;}
+.tl-points li strong{color:var(--dark);}
+.tl-stack{display:flex;flex-wrap:wrap;gap:5px;margin-top:13px;}
+.stk{font-size:.62rem;font-weight:600;padding:3px 8px;border-radius:6px;background:var(--cream2);color:var(--muted);}
 
-        /* SECTIONS */
-        section { padding: 100px 60px; }
-        .section-header { margin-bottom: 60px; }
-        .section-tag { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-        .section-tag::before { content: ''; width: 20px; height: 1px; background: var(--accent); }
-        .section-title { font-size: clamp(32px, 4vw, 52px); font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; }
+/* ── PROJECTS ── */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;}
+.project-card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .3s;opacity:0;transform:translateY(14px);}
+.project-card.visible{opacity:1;transform:translateY(0);}
+.project-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);}
+.pc-top{padding:22px 22px 18px;border-bottom:1px solid var(--border);}
+.project-status{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:20px;margin-bottom:10px;}
+.ps-live{background:#dcfce7;color:#15803d;}
+.ps-done{background:var(--rust-light);color:var(--rust);}
+.project-title{font-size:.95rem;font-weight:700;color:var(--dark);margin-bottom:8px;line-height:1.35;}
+.project-desc{font-size:.78rem;color:var(--mid);line-height:1.78;}
+.pc-bottom{padding:15px 22px;display:flex;flex-direction:column;gap:11px;}
+.ptags{display:flex;flex-wrap:wrap;gap:5px;}
+.ptag{font-size:.6rem;font-weight:600;padding:3px 8px;border-radius:6px;background:var(--rust-light);color:var(--rust);}
+.plinks{display:flex;gap:10px;flex-wrap:wrap;}
+.plink{font-size:.73rem;font-weight:600;color:var(--rust);display:inline-flex;align-items:center;gap:4px;transition:color .2s;}
+.plink:hover{color:var(--rust-dark);}
+.gh-bar{margin-top:36px;background:var(--cream2);border-radius:12px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;border-left:4px solid var(--rust);}
+.gh-bar p{font-size:.86rem;color:var(--mid);}
+.gh-bar p strong{color:var(--dark);}
 
-        /* ABOUT */
-        #about { background: var(--surface); }
-        .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
-        .about-text p { font-size: 16px; color: var(--light); line-height: 1.9; margin-bottom: 20px; }
-        .about-text p strong { color: var(--accent); }
-        .about-details { display: flex; flex-direction: column; gap: 14px; }
-        .detail-row { display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent); }
-        .detail-row i { color: var(--accent); font-size: 14px; width: 16px; }
-        .detail-row span { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--light); }
-        .lang-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
-        .lang-badge { padding: 6px 16px; border: 1px solid var(--accent); font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); letter-spacing: 1px; }
+/* ── CONTRIBUTE (merged What I Contribute + Services) ── */
+.contribute-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+.contrib-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:26px;transition:all .25s;}
+.contrib-card:hover{border-color:var(--rust);box-shadow:var(--shadow);transform:translateY(-2px);}
+.contrib-icon{width:44px;height:44px;border-radius:10px;background:var(--rust-light);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--rust);margin-bottom:14px;}
+.contrib-title{font-size:.9rem;font-weight:700;color:var(--dark);margin-bottom:7px;}
+.contrib-desc{font-size:.77rem;color:var(--muted);line-height:1.75;}
 
-        /* SKILLS */
-        #skills { background: var(--bg); }
-        .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .skill-card { background: var(--card); border: 1px solid var(--border); padding: 30px; position: relative; overflow: hidden; transition: all 0.3s; }
-        .skill-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent2)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
-        .skill-card:hover::before { transform: scaleX(1); }
-        .skill-card:hover { border-color: rgba(0,212,255,0.3); transform: translateY(-4px); }
-        .skill-icon { font-size: 28px; color: var(--accent); margin-bottom: 16px; }
-        .skill-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
-        .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-        .tag { font-family: 'DM Mono', monospace; font-size: 11px; padding: 4px 10px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); color: var(--accent); }
 
-        /* EXPERIENCE */
-        #experience { background: var(--surface); }
-        .timeline { display: flex; flex-direction: column; position: relative; padding-left: 40px; }
-        .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--accent), transparent); }
-        .timeline-item { position: relative; padding: 0 0 50px 40px; }
-        .timeline-item::before { content: ''; position: absolute; left: -40px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px rgba(0,212,255,0.5); }
-        .timeline-date { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
-        .timeline-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
-        .timeline-org { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
-        .timeline-body p { font-size: 15px; color: var(--light); line-height: 1.8; }
-        .timeline-body ul { list-style: none; padding: 0; margin-top: 12px; }
-        .timeline-body ul li { padding: 6px 0 6px 20px; position: relative; color: var(--light); font-size: 14px; line-height: 1.7; }
-        .timeline-body ul li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); }
 
-        /* PROJECTS */
-        #projects { background: var(--bg); }
-        .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-        .project-card { background: var(--card); border: 1px solid var(--border); padding: 32px; transition: all 0.3s; }
-        .project-card:hover { border-color: rgba(0,212,255,0.4); transform: translateY(-4px); }
-        .project-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 2px; margin-bottom: 16px; }
-        .project-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
-        .project-card p { font-size: 14px; color: var(--light); line-height: 1.7; margin-bottom: 20px; }
-        .project-stack { display: flex; flex-wrap: wrap; gap: 8px; }
 
-        /* CONTACT */
-        #contact { background: var(--surface); }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-        .contact-intro p { font-size: 16px; color: var(--light); line-height: 1.8; margin-bottom: 30px; }
-        .availability { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent2); padding: 24px; margin-bottom: 30px; }
-        .avail-dot { display: inline-block; width: 8px; height: 8px; background: var(--accent2); border-radius: 50%; margin-right: 8px; animation: blink 2s infinite; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-        .avail-text { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--accent2); }
-        .avail-desc { font-size: 14px; color: var(--light); margin-top: 8px; line-height: 1.6; }
-        .contact-links { display: flex; flex-direction: column; gap: 16px; }
-        .contact-link { display: flex; align-items: center; gap: 16px; padding: 18px 22px; background: var(--card); border: 1px solid var(--border); text-decoration: none; color: var(--text); transition: all 0.2s; }
-        .contact-link:hover { border-color: var(--accent); background: rgba(0,212,255,0.05); }
-        .contact-link i { color: var(--accent); font-size: 18px; width: 24px; }
-        .contact-link-text { flex: 1; }
-        .contact-link-label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 2px; }
-        .contact-link-value { font-size: 14px; color: var(--text); font-weight: 600; }
-        .contact-link .fa-arrow-right { color: var(--muted); font-size: 12px; }
+/* ── LEARNING JOURNEY ── */
+.journey-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.journey-story p{font-size:.88rem;color:#4a3028;line-height:1.92;margin-bottom:1.1rem;}
+.journey-story p strong{color:var(--dark);font-weight:600;}
+.journey-story .hl{color:var(--rust);font-weight:500;}
+.journey-quote{
+  border-left:3px solid var(--rust);
+  padding:16px 20px;
+  background:var(--rust-light);
+  border-radius:0 10px 10px 0;
+  margin:22px 0;
+  font-size:.88rem;
+  color:var(--mid);
+  font-style:italic;
+  line-height:1.8;
+}
+.journey-quote strong{color:var(--dark);font-style:normal;}
+.journey-milestones{display:flex;flex-direction:column;gap:14px;}
+.milestone{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:12px;padding:18px 20px;
+  display:flex;gap:16px;align-items:flex-start;
+  transition:all .2s;
+}
+.milestone:hover{border-color:var(--rust);box-shadow:var(--shadow);}
+.milestone-icon{
+  width:38px;height:38px;border-radius:9px;
+  background:var(--rust-light);display:flex;align-items:center;
+  justify-content:center;font-size:1rem;color:var(--rust);flex-shrink:0;
+}
+.milestone-title{font-size:.85rem;font-weight:700;color:var(--dark);margin-bottom:3px;}
+.milestone-desc{font-size:.75rem;color:var(--muted);line-height:1.65;}
+@media(max-width:900px){.journey-grid{grid-template-columns:1fr;gap:36px;}}
 
-        /* FOOTER */
-        footer { background: var(--bg); border-top: 1px solid var(--border); padding: 30px 60px; display: flex; justify-content: space-between; align-items: center; }
-        footer p { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); }
-        .footer-socials { display: flex; gap: 20px; }
-        .footer-socials a { color: var(--muted); font-size: 16px; transition: color 0.2s; text-decoration: none; }
-        .footer-socials a:hover { color: var(--accent); }
 
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            nav { padding: 16px 24px; }
-            .nav-links { gap: 16px; }
-            .nav-links a { font-size: 10px; }
-            .hero { grid-template-columns: 1fr; padding: 120px 24px 60px; text-align: center; }
-            .hero-tag { justify-content: center; }
-            .hero-btns { justify-content: center; }
-            .hero::after { display: none; }
-            .hero-image-wrap { order: -1; }
-            .stats-bar { grid-template-columns: repeat(2,1fr); padding: 24px; }
-            .stat { border-right: none; border-bottom: 1px solid var(--border); }
-            section { padding: 60px 24px; }
-            .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-            .skills-grid, .projects-grid { grid-template-columns: 1fr; }
-            footer { flex-direction: column; gap: 16px; text-align: center; padding: 24px; }
-        }
-    </style>
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:1120px;margin:0 auto;align-items:start;}
+.contact-cards{display:flex;flex-direction:column;gap:12px;}
+.contact-card{display:flex;align-items:center;gap:15px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:17px 20px;text-decoration:none;transition:all .2s;}
+.contact-card:hover{border-color:var(--rust);box-shadow:var(--shadow);transform:translateX(4px);}
+.cc-icon{width:42px;height:42px;border-radius:10px;background:var(--rust-light);display:flex;align-items:center;justify-content:center;font-size:1.05rem;color:var(--rust);flex-shrink:0;}
+.cc-label{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.cc-val{font-size:.83rem;font-weight:600;color:var(--dark);margin-top:1px;}
+.contact-right p{font-size:.87rem;color:#4a3028;line-height:1.85;margin-bottom:.9rem;}
+.contact-right .hl{color:var(--rust);font-weight:500;}
+.checklist{display:flex;flex-direction:column;gap:8px;margin-top:18px;}
+.ck{display:flex;align-items:center;gap:9px;font-size:.82rem;color:#4a3028;}
+.ck i{color:var(--rust);}
+.contact-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);padding:38px 5vw;}
+.footer-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;}
+.footer-brand{font-size:1rem;font-weight:800;color:#fff;}
+.footer-brand span{color:var(--rust-mid);}
+.footer-sub{font-size:.72rem;color:rgba(255,255,255,.4);margin-top:3px;}
+.footer-links{display:flex;gap:6px;}
+.flink{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);color:rgba(255,255,255,.55);font-size:.95rem;transition:all .2s;}
+.flink:hover{background:var(--rust);color:#fff;}
+.footer-copy{font-size:.72rem;color:rgba(255,255,255,.38);}
+
+/* ── ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(22px);transition:all .6s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero h1{font-size:clamp(2.8rem,10vw,4rem);}
+  .hero-overlay{background:linear-gradient(rgba(26,10,5,.8),rgba(26,10,5,.5));}
+  .avail-inner,.about-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .contact-right{order:-1;}
+}
+@media(max-width:680px){
+  .nav-links,.nav-actions .btn:not(.btn-sm){display:none;}
+  .hamburger{display:flex;}
+  section{padding:64px 5vw;}
+  .avail-section{padding:56px 5vw;}
+}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-    <div class="nav-logo">// ariane.ruth</div>
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">ARIANE <span>RUTH</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#journey">My Journey</a></li>
+    <li><a href="#contributions">Contributions</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="https://arianenji.us/assets/Ariane-Ruth-CV.pdf" class="btn btn-outline btn-sm" target="_blank"><i class="bi bi-download"></i> Resume</a>
+    <a href="#contact" class="btn btn-primary btn-sm">Get in touch</a>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#experience" onclick="toggleMenu()">Experience</a>
+  <a href="#projects" onclick="toggleMenu()">Projects</a>
+  <a href="#journey" onclick="toggleMenu()">My Journey</a>
+  <a href="#contributions" onclick="toggleMenu()">Contributions</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <div class="hero-tag">Available for opportunities</div>
-        <h1>Nji Ariane<br /><span>Ruth.</span></h1>
-        <p class="hero-desc">
-            Junior DevOps Engineer based in Cameroon — building reliable infrastructure,
-            automating deployments, and learning every day. Passionate about cloud-native
-            technologies, CI/CD pipelines, and making systems that just work.
-        </p>
-        <div class="hero-btns">
-            <a href="#contact" class="btn-primary">Hire Me</a>
-            <a href="assets/Ariane-Ruth-CV.pdf" download class="btn-secondary">
-                <i class="fa fa-download" style="margin-right:8px;"></i>Download CV
-            </a>
-        </div>
+<!-- HERO: fullscreen photo background -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://arianenji.us/assets/ariane.jpg" alt="Nji Menyonga Ariane Ruth"
+      onerror="this.parentElement.style.background='linear-gradient(135deg,#8b4a2a,#c8602a)'"/>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Junior DevOps Engineer</div>
+    <h1>
+      <span class="hello">Hello,</span>
+      <span class="name">I'm Nji Menyonga<br>Ariane Ruth.</span>
+    </h1>
+    <p class="hero-desc">Building real infrastructure, automating deployments, and getting better at it every single day.</p>
+    <p class="hero-meta">NextGen Playground · Primus Learning · Tech4Dev · Cameroon 🇨🇲 · Remote-ready</p>
+    <div class="hero-ctas">
+      <a href="https://arianenji.us/assets/Ariane-Ruth-CV.pdf" class="btn btn-white btn-lg" target="_blank"><i class="bi bi-download"></i> Download CV</a>
+      <a href="#contributions" class="btn btn-ghost btn-lg">What I Contribute</a>
+      <a href="#contact" class="btn btn-ghost btn-lg"><i class="bi bi-chat-dots"></i> Get in Touch</a>
     </div>
-    <div class="hero-image-wrap">
-        <img src="images/me.jpg" alt="Nji Ariane Ruth" class="hero-img" />
+    <div class="hero-socials">
+      <span class="hero-socials-label">Find me on</span>
+      <a href="https://www.linkedin.com/in/nji-ariane-ruth-494805172" class="social-icon" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/NjiAriane" class="social-icon" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+      <a href="mailto:njiariana@gmail.com" class="social-icon" title="Email"><i class="bi bi-envelope"></i></a>
     </div>
+  </div>
 </section>
 
-<!-- STATS -->
-<div class="stats-bar">
-    <div class="stat"><span class="stat-num">1+</span><span class="stat-label">Years Learning</span></div>
-    <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Tools Mastered</span></div>
-    <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Projects Done</span></div>
-    <div class="stat"><span class="stat-num">2</span><span class="stat-label">Languages</span></div>
-</div>
+<!-- AVAILABILITY + PROOF OF PROGRESS -->
+<section class="avail-section" id="availability">
+  <div class="avail-inner">
+    <div>
+      <div class="avail-eyebrow">Availability</div>
+      <h2>Open to DevOps internships, junior roles, and hands-on collaborations.</h2>
+      <p>I want to work on real infrastructure with real engineers. Whether that's a junior role, an internship, or a project, I show up prepared, ask good questions, and put in the hours to figure things out.</p>
+      <div class="avail-list">
+        <div class="avail-item"><i class="bi bi-check-circle-fill"></i> Full-time junior DevOps roles</div>
+        <div class="avail-item"><i class="bi bi-check-circle-fill"></i> DevOps internship programmes</div>
+        <div class="avail-item"><i class="bi bi-check-circle-fill"></i> Remote or Cameroon-based positions</div>
+        <div class="avail-item"><i class="bi bi-check-circle-fill"></i> Project collaborations and open source</div>
+        <div class="avail-item"><i class="bi bi-check-circle-fill"></i> DevOps Micro Internship Cohort 3, starting June 6, 2026</div>
+      </div>
+      <a href="#contact" class="btn btn-white">Start a conversation</a>
+    </div>
+    <div>
+      <div class="avail-eyebrow">Proof of Progress</div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-num">2+</div>
+          <div class="stat-label">Years Learning</div>
+          <div class="stat-desc">Training in DevOps since 2023</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Projects Live</div>
+          <div class="stat-desc">Deployed and publicly accessible</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num sm">AWS + Docker</div>
+          <div class="stat-label">Primary Stack</div>
+          <div class="stat-desc">Cloud + containerisation focus</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Tools Mastered</div>
+          <div class="stat-desc">Across the DevOps lifecycle</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Languages</div>
+          <div class="stat-desc">English and French</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num sm">Cohort 3</div>
+          <div class="stat-label">Micro Internship</div>
+          <div class="stat-desc">Starting June 6, 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ABOUT -->
 <section id="about">
-    <div class="section-header">
-        <div class="section-tag">Who I Am</div>
-        <h2 class="section-title">About Me</h2>
-    </div>
+  <div class="container">
+    <div class="section-label fade-up">Who I Am</div>
     <div class="about-grid">
-        <div class="about-text">
-            <p>I am a junior DevOps engineer based in <strong>Cameroon</strong>, currently sharpening my skills through the <strong>NextGen Playground DevOps program</strong> — a hands-on training initiative focused on real-world cloud and infrastructure practices.</p>
-            <p>My journey into DevOps started with a genuine curiosity about how software gets built, shipped, and kept alive in production. Over the past year and a half, I've gone from understanding basic Linux commands to provisioning cloud infrastructure with <strong>Terraform</strong>, automating configuration with <strong>Ansible</strong>, and deploying containerized applications with <strong>Kubernetes</strong>.</p>
-            <p>I trained at <strong>Primus Learning</strong>, where I built a strong foundation in cloud computing, networking, and infrastructure fundamentals. I believe in learning by doing — every concept I study, I apply in a real project. My goal is to grow into a confident DevOps engineer who bridges the gap between development teams and reliable cloud infrastructure.</p>
-            <p>I thrive in collaborative environments and am passionate about automation, continuous improvement, and building systems that are scalable, secure, and efficient.</p>
-            <div class="lang-badges">
-                <span class="lang-badge">🇬🇧 English</span>
-                <span class="lang-badge">🇫🇷 French</span>
+      <div class="fade-up">
+        <div class="about-photo-card">
+          <img src="https://arianenji.us/assets/ariane.jpg" alt="Nji Menyonga Ariane Ruth"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="about-photo-fallback" style="display:none;">
+            <i class="bi bi-person-circle"></i>
+            <span style="font-size:.75rem;color:var(--rust);">Upload photo to assets/ariane.jpg</span>
+          </div>
+          <div class="about-photo-overlay">
+            <div class="about-photo-name">Nji Menyonga Ariane Ruth</div>
+            <div class="about-photo-role">Junior DevOps Engineer · Cameroon</div>
+            <div class="tag-pills">
+              <span class="tag-pill">CI/CD</span>
+              <span class="tag-pill">Docker</span>
+              <span class="tag-pill">Kubernetes</span>
+              <span class="tag-pill">Terraform</span>
             </div>
+          </div>
         </div>
-        <div class="about-details">
-            <div class="detail-row"><i class="fa fa-map-marker-alt"></i><span>Cameroon 🇨🇲</span></div>
-            <div class="detail-row"><i class="fa fa-graduation-cap"></i><span>Primus Learning</span></div>
-            <div class="detail-row"><i class="fa fa-briefcase"></i><span>Junior DevOps Engineer</span></div>
-            <div class="detail-row"><i class="fa fa-envelope"></i><span>njiariana@gmail.com</span></div>
-            <div class="detail-row"><i class="fa fa-circle" style="color:var(--accent2);font-size:10px;"></i><span>Open to Internships & Junior Roles</span></div>
+      </div>
+      <div class="about-text fade-up">
+        <h2 class="section-title">Junior DevOps Engineer<br><span>based in Cameroon</span></h2>
+        <div class="divider-line" style="margin-bottom:20px;"></div>
+        <p>My name is <strong>Nji Menyonga Ariane Ruth</strong> and I'm a junior DevOps engineer with a growing passion for cloud infrastructure, automation, and getting things to actually work in production, not just on paper.</p>
+        <p>I started learning DevOps in 2023 and built my foundation at <strong>Primus Learning</strong> (2024–2025), where I got hands-on with Linux, networking, AWS, Docker, Kubernetes, Terraform, Ansible, and monitoring tools like Prometheus and Grafana. I also completed a <span class="hl">3-week AWS Bootcamp with Tech4Dev</span>, which gave me focused, practical experience on core AWS services.</p>
+        <p>Since 2025 I've been part of <strong>NextGen Playground</strong>, where I moved from theory to practice. I've deployed live infrastructure, built full CI/CD pipelines that go from a git push all the way to a running container with zero manual steps, and set up monitoring so I know when things break.</p>
+        <p>Starting <strong>June 6th, 2026</strong>, I'm joining <span class="hl">Cohort 3 of the DevOps Micro Internship</span> under <strong>Mentor Praveen Pandey</strong>. I take my growth seriously, and I document everything I build.</p>
+        <div class="internship-card">
+          <div class="ic-eyebrow"><i class="bi bi-award-fill" style="color:#d97706;"></i>Upcoming Internship</div>
+          <div class="ic-title">DevOps Micro Internship: Cohort 3</div>
+          <div class="ic-detail">Starting <strong>June 6, 2026</strong> · Mentor: <strong>Praveen Pandey</strong><br>Working on real infrastructure tasks in a structured internship setting alongside other engineers.</div>
         </div>
+        <div class="meta-grid">
+          <div class="meta-item"><div class="meta-k">Location</div><div class="meta-v">Cameroon 🇨🇲</div></div>
+          <div class="meta-item"><div class="meta-k">Training</div><div class="meta-v">NextGen Playground · Primus · Tech4Dev</div></div>
+          <div class="meta-item"><div class="meta-k">Languages</div><div class="meta-v">English 🇬🇧 · French 🇫🇷</div></div>
+          <div class="meta-item"><div class="meta-k">Status</div><div class="meta-v" style="color:var(--rust)">Open to Roles ✓</div></div>
+        </div>
+        <div class="mini-stats">
+          <div class="mini-stat"><div class="mn">2+</div><div class="ml">Years Learning</div></div>
+          <div class="mini-stat"><div class="mn">3</div><div class="ml">Projects Live</div></div>
+          <div class="mini-stat"><div class="mn">10+</div><div class="ml">Tools Mastered</div></div>
+          <div class="mini-stat"><div class="mn">2</div><div class="ml">Languages</div></div>
+        </div>
+        <div class="about-ctas">
+          <a href="#contact" class="btn btn-primary">Get in Touch <i class="bi bi-arrow-right"></i></a>
+          <a href="https://arianenji.us/assets/Ariane-Ruth-CV.pdf" class="btn btn-outline" target="_blank"><i class="bi bi-download"></i> Download CV</a>
+          <a href="https://wa.me/237671852602" class="btn btn-outline" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
-    <div class="section-header">
-        <div class="section-tag">What I Know</div>
-        <h2 class="section-title">Skills & Tools</h2>
+<section id="skills" class="section-bg">
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:40px;">
+      <div class="section-label">Tools &amp; Tech</div>
+      <h2 class="section-title">DevOps Skills &amp; <span>Stack</span></h2>
+      <div class="divider-line"></div>
+      <p class="section-sub" style="margin-top:14px;">Hands-on experience across the full DevOps lifecycle, from source control to deployment and monitoring.</p>
     </div>
-    <div class="skills-grid">
-        <div class="skill-card">
-            <div class="skill-icon"><i class="fa fa-cloud"></i></div>
-            <h3>Cloud & Infrastructure</h3>
-            <div class="skill-tags">
-                <span class="tag">AWS</span><span class="tag">EC2</span><span class="tag">S3</span><span class="tag">VPC</span><span class="tag">IAM</span><span class="tag">Cloudflare</span>
-            </div>
-        </div>
-        <div class="skill-card">
-            <div class="skill-icon"><i class="fa fa-cubes"></i></div>
-            <h3>Containers & Orchestration</h3>
-            <div class="skill-tags">
-                <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Helm</span><span class="tag">Container Registry</span>
-            </div>
-        </div>
-        <div class="skill-card">
-            <div class="skill-icon"><i class="fa fa-code-branch"></i></div>
-            <h3>CI/CD & Automation</h3>
-            <div class="skill-tags">
-                <span class="tag">GitHub Actions</span><span class="tag">Git</span><span class="tag">Ansible</span><span class="tag">Bash Scripting</span>
-            </div>
-        </div>
-        <div class="skill-card">
-            <div class="skill-icon"><i class="fa fa-layer-group"></i></div>
-            <h3>Infrastructure as Code</h3>
-            <div class="skill-tags">
-                <span class="tag">Terraform</span><span class="tag">IaC Principles</span><span class="tag">State Management</span>
-            </div>
-        </div>
-        <div class="skill-card">
-            <div class="skill-icon"><i class="fa fa-chart-line"></i></div>
-            <h3>Monitoring & Observability</h3>
-            <div class="skill-tags">
-                <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Alerting</span><span class="tag">Metrics</span>
-            </div>
-        </div>
-        <div class="skill-card">
-            <div class="skill-icon"><i class="fa fa-terminal"></i></div>
-            <h3>OS & Networking</h3>
-            <div class="skill-tags">
-                <span class="tag">Linux</span><span class="tag">Ubuntu</span><span class="tag">DNS</span><span class="tag">Networking</span>
-            </div>
-        </div>
+    <div class="skills-grid fade-up">
+      <div class="skill-card"><div class="skill-card-title"><i class="bi bi-cloud-fill"></i>Cloud &amp; Infrastructure</div><div class="skill-tags"><span class="stag">AWS EC2</span><span class="stag">S3</span><span class="stag">VPC</span><span class="stag">IAM</span><span class="stag">Cloudflare</span></div></div>
+      <div class="skill-card"><div class="skill-card-title"><i class="bi bi-boxes"></i>Containers &amp; Orchestration</div><div class="skill-tags"><span class="stag">Docker</span><span class="stag">Kubernetes</span><span class="stag">Helm</span><span class="stag">Docker Hub</span></div></div>
+      <div class="skill-card"><div class="skill-card-title"><i class="bi bi-arrow-repeat"></i>CI/CD &amp; Automation</div><div class="skill-tags"><span class="stag">GitHub Actions</span><span class="stag">Git</span><span class="stag">Bash</span><span class="stag">Webhooks</span></div></div>
+      <div class="skill-card"><div class="skill-card-title"><i class="bi bi-file-code-fill"></i>Infrastructure as Code</div><div class="skill-tags"><span class="stag">Terraform</span><span class="stag">Ansible</span><span class="stag">IaC Principles</span></div></div>
+      <div class="skill-card"><div class="skill-card-title"><i class="bi bi-graph-up-arrow"></i>Monitoring &amp; Observability</div><div class="skill-tags"><span class="stag">Prometheus</span><span class="stag">Grafana</span><span class="stag">UptimeRobot</span><span class="stag">Alerting</span></div></div>
+      <div class="skill-card"><div class="skill-card-title"><i class="bi bi-hdd-fill"></i>OS &amp; Networking</div><div class="skill-tags"><span class="stag">Linux</span><span class="stag">Ubuntu</span><span class="stag">DNS</span><span class="stag">Networking</span></div></div>
+      <div class="skill-card"><div class="skill-card-title"><i class="bi bi-git"></i>Version Control</div><div class="skill-tags"><span class="stag">Git</span><span class="stag">GitHub</span><span class="stag">Branching</span><span class="stag">Pull Requests</span></div></div>
+      <div class="skill-card"><div class="skill-card-title"><i class="bi bi-shield-check-fill"></i>Security Basics</div><div class="skill-tags"><span class="stag">HTTPS / SSL</span><span class="stag">IAM Policies</span><span class="stag">GitHub Secrets</span></div></div>
     </div>
+  </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-    <div class="section-header">
-        <div class="section-tag">My Journey</div>
-        <h2 class="section-title">Experience & Training</h2>
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:44px;">
+      <div class="section-label">Journey</div>
+      <h2 class="section-title">Experience &amp; <span>Training</span></h2>
+      <div class="divider-line"></div>
+      <p class="section-sub" style="margin-top:14px;">Training and project experience building real infrastructure in Cameroon and remote environments.</p>
     </div>
     <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-date">2024 — Present</div>
-            <div class="timeline-title">DevOps Engineer Trainee</div>
-            <div class="timeline-org">NextGen Playground — Cameroon</div>
-            <div class="timeline-body">
-                <p>Participating in an intensive, hands-on DevOps training program designed to simulate real-world engineering workflows. Working on live projects covering the full DevOps lifecycle from source control to deployment and monitoring.</p>
-                <ul>
-                    <li>Deployed static websites using GitHub Pages with custom domain and Cloudflare DNS — including DNS proxying, HTTPS enforcement, and orange cloud security</li>
-                    <li>Practised Git workflows daily — branching, commits, pull requests, and resolving conflicts</li>
-                    <li>Built and tested CI/CD pipelines using GitHub Actions for automated deployments on every push</li>
-                    <li>Collaborating with a cohort of engineers to solve real infrastructure challenges under time pressure</li>
-                </ul>
-            </div>
+      <!-- Upcoming -->
+      <div class="tl-item">
+        <div class="tl-dot upcoming"></div>
+        <div class="tl-card upcoming-card">
+          <div class="tl-header">
+            <div class="tl-role">🎯 DevOps Micro Intern</div>
+            <div class="tl-date ud">June 6, 2026 · Upcoming</div>
+          </div>
+          <div class="tl-org uo">Cohort 3 · Mentor: Praveen Pandey</div>
+          <ul class="tl-points">
+            <li>Selected for <strong>Cohort 3 of the DevOps Micro Internship</strong>, starting June 6th 2026</li>
+            <li>Will work on real-world DevOps projects under the mentorship of <strong>Praveen Pandey</strong></li>
+            <li>Programme focuses on production-grade infrastructure, CI/CD workflows, and collaborative engineering practices</li>
+          </ul>
         </div>
-        <div class="timeline-item">
-            <div class="timeline-date">2023 — 2024</div>
-            <div class="timeline-title">Cloud & DevOps Student</div>
-            <div class="timeline-org">Primus Learning — Cameroon</div>
-            <div class="timeline-body">
-                <p>Completed structured training in cloud computing and infrastructure fundamentals, gaining hands-on exposure to industry-standard tools and practices used in production environments.</p>
-                <ul>
-                    <li>Studied Linux system administration, networking fundamentals, and server management</li>
-                    <li>Learned cloud computing principles with a focus on AWS services including EC2, S3, IAM, and VPC</li>
-                    <li>Introduced to containerisation with Docker and container orchestration with Kubernetes</li>
-                    <li>Practised infrastructure provisioning with Terraform and configuration management with Ansible</li>
-                    <li>Set up monitoring dashboards using Prometheus and Grafana to track system metrics and alerts</li>
-                </ul>
-            </div>
+      </div>
+      <!-- NextGen -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-role">DevOps Engineer Trainee</div>
+            <div class="tl-date">2025 · Present</div>
+          </div>
+          <div class="tl-org">NextGen Playground · Cameroon</div>
+          <ul class="tl-points">
+            <li><strong>CV Deployment:</strong> Deployed portfolio website via GitHub Pages with custom domain, Cloudflare DNS proxying, HTTPS enforcement, and orange cloud security</li>
+            <li><strong>CI/CD Pipeline:</strong> Built a fully automated pipeline: every push to main triggers GitHub Actions to build and push a Docker image to Docker Hub, which Render auto-deploys with zero manual steps</li>
+            <li><strong>Docker Containerisation:</strong> Containerised a web application and published the image to Docker Hub as <strong>ariana1/myapp</strong></li>
+            <li><strong>Monitoring:</strong> Set up 24/7 availability monitoring with UptimeRobot, with email alerts on any downtime</li>
+            <li><strong>Git Workflows:</strong> Practised branching, pull requests, multi-branch merging, and conflict resolution daily</li>
+          </ul>
+          <div class="tl-stack">
+            <span class="stk">Docker</span><span class="stk">GitHub Actions</span><span class="stk">Cloudflare</span><span class="stk">Render</span><span class="stk">UptimeRobot</span><span class="stk">Git</span>
+          </div>
         </div>
+      </div>
+      <!-- Primus -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-role">Cloud &amp; DevOps Student</div>
+            <div class="tl-date">2024 · 2025</div>
+          </div>
+          <div class="tl-org">Primus Learning · Cameroon</div>
+          <ul class="tl-points">
+            <li><strong>Linux:</strong> Studied system administration, networking fundamentals, and server management</li>
+            <li><strong>Cloud:</strong> Learned AWS services (EC2, S3, IAM, VPC) with a focus on real-world use cases</li>
+            <li><strong>Containers:</strong> Introduced to containerisation with Docker and orchestration with Kubernetes</li>
+            <li><strong>IaC:</strong> Practised infrastructure provisioning with Terraform and configuration management with Ansible</li>
+            <li><strong>Monitoring:</strong> Set up Prometheus and Grafana dashboards to track system metrics and configure alerts</li>
+          </ul>
+          <div class="tl-stack">
+            <span class="stk">Linux</span><span class="stk">AWS</span><span class="stk">Docker</span><span class="stk">Kubernetes</span><span class="stk">Terraform</span><span class="stk">Ansible</span><span class="stk">Prometheus</span><span class="stk">Grafana</span>
+          </div>
+        </div>
+      </div>
+      <!-- Tech4Dev -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-role">AWS Bootcamp Participant</div>
+            <div class="tl-date">2023 · 3 Weeks</div>
+          </div>
+          <div class="tl-org">Tech4Dev · AWS Bootcamp</div>
+          <ul class="tl-points">
+            <li>Completed an intensive <strong>3-week AWS Bootcamp</strong> covering core cloud services and practical deployment workflows</li>
+            <li>Worked hands-on with <strong>EC2, S3, IAM, VPC</strong>, and cloud architecture fundamentals</li>
+            <li>Gained practical exposure to provisioning, access management, and cloud security basics on AWS</li>
+            <li>This bootcamp was the starting point of my DevOps and cloud journey</li>
+          </ul>
+          <div class="tl-stack">
+            <span class="stk">AWS EC2</span><span class="stk">S3</span><span class="stk">IAM</span><span class="stk">VPC</span><span class="stk">Cloud Architecture</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-    <div class="section-header">
-        <div class="section-tag">What I've Built</div>
-        <h2 class="section-title">Projects</h2>
+<section id="projects" class="section-bg">
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:40px;">
+      <div class="section-label">Portfolio</div>
+      <h2 class="section-title">Highlighted <span>Projects</span></h2>
+      <div class="divider-line"></div>
+      <p class="section-sub" style="margin-top:14px;">Real infrastructure built for real problems. Source code, Dockerfiles, and CI/CD configs are all on GitHub.</p>
     </div>
     <div class="projects-grid">
-        <div class="project-card">
-            <div class="project-num">01 —</div>
-            <h3>CI/CD Pipeline with GitHub Actions</h3>
-            <p>Designed and implemented an automated deployment pipeline using GitHub Actions. The pipeline triggers on every git push, runs build steps, and deploys automatically — eliminating manual deployment entirely and reducing human error.</p>
-            <div class="project-stack"><span class="tag">GitHub Actions</span><span class="tag">Git</span><span class="tag">CI/CD</span><span class="tag">Automation</span></div>
+      <div class="project-card">
+        <div class="pc-top">
+          <div class="project-status ps-live">Live · Production</div>
+          <div class="project-title">Talent Forge DevOps: Dockerised App with Full CI/CD Pipeline</div>
+          <div class="project-desc">A containerised web application with a complete end-to-end DevOps workflow. Every code push triggers GitHub Actions to build and push a Docker image to Docker Hub, which Render auto-deploys with zero manual steps. Monitored 24/7 with UptimeRobot.</div>
         </div>
-        <div class="project-card">
-            <div class="project-num">02 —</div>
-            <h3>Cloud Infrastructure with Terraform</h3>
-            <p>Provisioned cloud infrastructure on AWS using Terraform, following Infrastructure as Code principles. Defined compute instances, networking, and storage as reusable, version-controlled configuration files for repeatable deployments.</p>
-            <div class="project-stack"><span class="tag">Terraform</span><span class="tag">AWS</span><span class="tag">IaC</span><span class="tag">State Management</span></div>
+        <div class="pc-bottom">
+          <div class="ptags"><span class="ptag">Docker</span><span class="ptag">GitHub Actions</span><span class="ptag">Docker Hub</span><span class="ptag">Render</span><span class="ptag">UptimeRobot</span><span class="ptag">CI/CD</span></div>
+          <div class="plinks">
+            <a href="https://github.com/NjiAriane/talent-forge-devops" class="plink" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+            <a href="https://talent-forge-devops.onrender.com" class="plink" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Live App</a>
+          </div>
         </div>
-        <div class="project-card">
-            <div class="project-num">03 —</div>
-            <h3>Server Configuration with Ansible</h3>
-            <p>Automated server configuration and application setup using Ansible playbooks. Eliminated manual steps and ensured consistent, repeatable environments across multiple servers — cutting configuration time dramatically.</p>
-            <div class="project-stack"><span class="tag">Ansible</span><span class="tag">Linux</span><span class="tag">Playbooks</span><span class="tag">Automation</span></div>
+      </div>
+      <div class="project-card">
+        <div class="pc-top">
+          <div class="project-status ps-live">Live</div>
+          <div class="project-title">CV Portfolio via GitHub Pages &amp; Cloudflare</div>
+          <div class="project-desc">Built and deployed this personal portfolio using GitHub Pages with a custom domain through Cloudflare. Configured DNS records, enabled proxy, enforced HTTPS, and set up automatic deployment on every push to main.</div>
         </div>
-        <div class="project-card">
-            <div class="project-num">04 —</div>
-            <h3>CV Portfolio — Deployed with GitHub Pages & Cloudflare</h3>
-            <p>Built and deployed this personal portfolio using GitHub Pages with a custom domain through Cloudflare. Configured DNS records, enabled proxy (orange cloud), enforced HTTPS, and set up automatic deployment on every git push.</p>
-            <div class="project-stack"><span class="tag">GitHub Pages</span><span class="tag">Cloudflare</span><span class="tag">DNS</span><span class="tag">HTTPS</span></div>
+        <div class="pc-bottom">
+          <div class="ptags"><span class="ptag">GitHub Pages</span><span class="ptag">Cloudflare</span><span class="ptag">DNS</span><span class="ptag">HTTPS</span><span class="ptag">Git</span></div>
+          <div class="plinks">
+            <a href="https://arianenji.us" class="plink" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Live site</a>
+            <a href="https://github.com/NjiAriane" class="plink" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+          </div>
         </div>
+      </div>
+      <div class="project-card">
+        <div class="pc-top">
+          <div class="project-status ps-done">In Progress</div>
+          <div class="project-title">Scalable Todo App on AWS: Terraform, Ansible, Kubernetes &amp; CI/CD</div>
+          <div class="project-desc">Production-grade capstone project deploying a containerised Todo application on AWS. Terraform provisions the full VPC, EC2 nodes, security groups, ECR, and S3 remote state with DynamoDB locking. Ansible bootstraps a Kubernetes cluster using kubeadm across control plane and worker nodes. GitHub Actions handles the full CI/CD pipeline: build, test, push Docker image, and deploy to Kubernetes. Includes Prometheus and Grafana for monitoring.</div>
+        </div>
+        <div class="pc-bottom">
+          <div class="ptags">
+            <span class="ptag">Terraform</span>
+            <span class="ptag">Ansible</span>
+            <span class="ptag">Kubernetes</span>
+            <span class="ptag">AWS</span>
+            <span class="ptag">GitHub Actions</span>
+            <span class="ptag">Docker</span>
+            <span class="ptag">kubeadm</span>
+            <span class="ptag">Prometheus</span>
+            <span class="ptag">Grafana</span>
+          </div>
+          <div class="plinks">
+            <a href="https://github.com/NjiAriane/todo-app-infrastructure" class="plink" target="_blank"><i class="bi bi-github"></i> View on GitHub</a>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="gh-bar fade-up">
+      <p><strong>All projects are on GitHub.</strong> Source code, Dockerfiles, CI/CD workflows, and READMEs for every project listed above.</p>
+      <a href="https://github.com/NjiAriane" class="btn btn-primary" target="_blank"><i class="bi bi-github"></i> View GitHub Profile</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I CONTRIBUTE -->
+<section id="contributions">
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:40px;">
+      <div class="section-label">My Value</div>
+      <h2 class="section-title">What I <span>Contribute</span></h2>
+      <div class="divider-line"></div>
+      <p class="section-sub" style="margin-top:14px;">Six things I bring to any DevOps team from day one, grounded in work I've actually done.</p>
+    </div>
+    <div class="contribute-grid fade-up">
+      <div class="contrib-card">
+        <div class="contrib-icon"><i class="bi bi-boxes"></i></div>
+        <div class="contrib-title">Containerising with Docker</div>
+        <div class="contrib-desc">I package applications into Docker containers, write Dockerfiles, manage images on Docker Hub, and make sure what runs on my machine runs exactly the same everywhere else.</div>
+      </div>
+      <div class="contrib-card">
+        <div class="contrib-icon"><i class="bi bi-arrow-repeat"></i></div>
+        <div class="contrib-title">Building CI/CD Pipelines</div>
+        <div class="contrib-desc">I connect Git to deployment. A push to main triggers a GitHub Actions workflow that builds, tests, and ships the application automatically. No one has to touch a server.</div>
+      </div>
+      <div class="contrib-card">
+        <div class="contrib-icon"><i class="bi bi-cloud-upload-fill"></i></div>
+        <div class="contrib-title">Deploying to Cloud Platforms</div>
+        <div class="contrib-desc">I deploy web applications to cloud platforms like Render and AWS, configure environments correctly, and make sure things stay up after they go live.</div>
+      </div>
+      <div class="contrib-card">
+        <div class="contrib-icon"><i class="bi bi-file-code-fill"></i></div>
+        <div class="contrib-title">Writing Infrastructure as Code</div>
+        <div class="contrib-desc">I use Terraform to define and provision infrastructure so environments are consistent, repeatable, and version-controlled, not configured by hand and forgotten.</div>
+      </div>
+      <div class="contrib-card">
+        <div class="contrib-icon"><i class="bi bi-activity"></i></div>
+        <div class="contrib-title">Setting Up Monitoring and Alerts</div>
+        <div class="contrib-desc">I set up UptimeRobot, Prometheus, and Grafana so the team knows about problems before users do. Downtime alerts, dashboards, and health checks built in.</div>
+      </div>
+      <div class="contrib-card">
+        <div class="contrib-icon"><i class="bi bi-journal-code"></i></div>
+        <div class="contrib-title">Documenting What I Build</div>
+        <div class="contrib-desc">Every project gets a proper README, architecture notes, and clear steps for how to reproduce it. Good documentation is part of the work, not an afterthought.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- LEARNING JOURNEY -->
+<section id="journey" class="section-bg">
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:44px;">
+      <div class="section-label">My Story</div>
+      <h2 class="section-title">Learning <span>Journey</span></h2>
+      <div class="divider-line"></div>
+      <p class="section-sub" style="margin-top:14px;">Why I started, what I have learned so far, and the kind of engineer I am working to become.</p>
+    </div>
+    <div class="journey-grid">
+      <div class="journey-story fade-up">
+        <p>I joined the NextGen Playground DevOps programme because I wanted to understand how software actually gets from a developer's laptop to a live server and how to keep it running reliably once it gets there. That question kept pulling me toward DevOps, and I decided to stop reading about it and start building.</p>
+        <p>My learning started in 2023 with a <strong>3-week AWS Bootcamp through Tech4Dev</strong>, which gave me my first real taste of cloud infrastructure. That experience showed me how much there was to learn and made me want to go deeper. I then trained at <strong>Primus Learning (2024–2025)</strong>, where I got hands-on with Linux, Docker, Kubernetes, Terraform, Ansible, Prometheus, and Grafana, not just as theory but as tools I actually used.</p>
+        <p>Since joining <strong>NextGen Playground in 2025</strong>, I have deployed a live portfolio with custom DNS through Cloudflare, built a fully automated CI/CD pipeline that ships a containerised application to production on every git push, and started work on a production-grade capstone project using Terraform, Ansible, and Kubernetes on AWS.</p>
+        <div class="journey-quote">
+          "I don't wait until I understand everything before I start. I deploy something, watch it break, figure out why, and fix it. That is how I actually learn."<br>
+          <strong>Nji Menyonga Ariane Ruth</strong>
+        </div>
+        <p>The kind of engineer I am working to become is one who <span class="hl">understands the full system</span>, not just the tool in front of them. I want to be the person on a team who can trace a problem from the user's browser all the way down to the infrastructure layer, and fix it. I want to build things that are automated, observable, and reliable enough that the team can sleep at night.</p>
+        <p>I am not there yet. But I know exactly what I am building toward, and I show up every day to close the gap.</p>
+      </div>
+      <div class="journey-milestones fade-up">
+        <div class="milestone">
+          <div class="milestone-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
+          <div>
+            <div class="milestone-title">Why I Started</div>
+            <div class="milestone-desc">I wanted to understand how software goes from code to a live server and how teams keep it running. DevOps was the answer to that question.</div>
+          </div>
+        </div>
+        <div class="milestone">
+          <div class="milestone-icon"><i class="bi bi-cloud-fill"></i></div>
+          <div>
+            <div class="milestone-title">AWS Bootcamp with Tech4Dev (2023)</div>
+            <div class="milestone-desc">3 weeks of focused AWS training: EC2, S3, IAM, VPC. My first real cloud experience and the moment I knew this was the direction I wanted to go.</div>
+          </div>
+        </div>
+        <div class="milestone">
+          <div class="milestone-icon"><i class="bi bi-laptop-fill"></i></div>
+          <div>
+            <div class="milestone-title">Primus Learning (2024–2025)</div>
+            <div class="milestone-desc">Deep foundation in Linux, Docker, Kubernetes, Terraform, Ansible, Prometheus, and Grafana. Every concept practised, not just read.</div>
+          </div>
+        </div>
+        <div class="milestone">
+          <div class="milestone-icon"><i class="bi bi-hammer"></i></div>
+          <div>
+            <div class="milestone-title">NextGen Playground (2025–Present)</div>
+            <div class="milestone-desc">From theory to live infrastructure. Deployed real projects, built CI/CD pipelines, containerised applications, and started a production capstone on AWS.</div>
+          </div>
+        </div>
+        <div class="milestone">
+          <div class="milestone-icon"><i class="bi bi-award-fill"></i></div>
+          <div>
+            <div class="milestone-title">DevOps Micro Internship: Cohort 3 (June 2026)</div>
+            <div class="milestone-desc">Next step: working on real infrastructure tasks in a structured internship setting under Mentor Praveen Pandey alongside other engineers.</div>
+          </div>
+        </div>
+        <div class="milestone">
+          <div class="milestone-icon"><i class="bi bi-bullseye"></i></div>
+          <div>
+            <div class="milestone-title">The Engineer I Am Becoming</div>
+            <div class="milestone-desc">Someone who understands the full system, builds things that are automated and observable, and leaves every codebase and infrastructure more reliable than they found it.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <div class="section-header">
-        <div class="section-tag">Get In Touch</div>
-        <h2 class="section-title">Contact Me</h2>
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:44px;">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Let's <span>Connect</span></h2>
+      <div class="divider-line"></div>
+      <p class="section-sub" style="margin-top:14px;">Hiring, collaborating, or just want to say hi? I respond within 24 hours.</p>
     </div>
     <div class="contact-grid">
-        <div class="contact-intro">
-            <div class="availability">
-                <div><span class="avail-dot"></span><span class="avail-text">Currently Available</span></div>
-                <p class="avail-desc">I am actively looking for internship opportunities and junior DevOps roles where I can contribute, grow, and work alongside experienced engineers.</p>
-            </div>
-            <p>Whether you're looking for a motivated junior engineer to join your team, want to collaborate on a project, or just want to connect — feel free to reach out. I respond promptly and am always open to conversations about cloud infrastructure and DevOps.</p>
+      <div class="contact-cards fade-up">
+        <a href="mailto:njiariana@gmail.com" class="contact-card">
+          <div class="cc-icon"><i class="bi bi-envelope-fill"></i></div>
+          <div><div class="cc-label">Email</div><div class="cc-val">njiariana@gmail.com</div></div>
+        </a>
+        <a href="https://wa.me/237671852602" class="contact-card" target="_blank">
+          <div class="cc-icon" style="background:#dcfce7;color:#15803d;"><i class="bi bi-whatsapp"></i></div>
+          <div><div class="cc-label">WhatsApp · Quick questions welcome</div><div class="cc-val">+237 671 852 602</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/nji-ariane-ruth-494805172" class="contact-card" target="_blank">
+          <div class="cc-icon"><i class="bi bi-linkedin"></i></div>
+          <div><div class="cc-label">LinkedIn · Connect and DM me</div><div class="cc-val">Nji Ariane Ruth</div></div>
+        </a>
+        <a href="https://github.com/NjiAriane" class="contact-card" target="_blank">
+          <div class="cc-icon" style="background:var(--cream2);color:var(--dark);"><i class="bi bi-github"></i></div>
+          <div><div class="cc-label">GitHub · All my projects</div><div class="cc-val">github.com/NjiAriane</div></div>
+        </a>
+        <div class="contact-card" style="cursor:default;">
+          <div class="cc-icon" style="background:#fef3c7;color:#d97706;"><i class="bi bi-geo-alt-fill"></i></div>
+          <div><div class="cc-label">Location</div><div class="cc-val">Cameroon 🇨🇲 · Available globally (remote)</div></div>
         </div>
-        <div class="contact-links">
-            <a href="mailto:njiariana@gmail.com" class="contact-link">
-                <i class="fa fa-envelope"></i>
-                <div class="contact-link-text"><span class="contact-link-label">Email</span><span class="contact-link-value">njiariana@gmail.com</span></div>
-                <i class="fa fa-arrow-right"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/nji-ariane-ruth-494805172" target="_blank" class="contact-link">
-                <i class="fab fa-linkedin"></i>
-                <div class="contact-link-text"><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">Nji Ariane Ruth</span></div>
-                <i class="fa fa-arrow-right"></i>
-            </a>
-            <a href="https://github.com/njiariane" target="_blank" class="contact-link">
-                <i class="fab fa-github"></i>
-                <div class="contact-link-text"><span class="contact-link-label">GitHub</span><span class="contact-link-value">github.com/njiariane</span></div>
-                <i class="fa fa-arrow-right"></i>
-            </a>
-            <a href="tel:+237671852602" class="contact-link">
-                <i class="fa fa-phone"></i>
-                <div class="contact-link-text"><span class="contact-link-label">Phone</span><span class="contact-link-value">+237 671 852 602</span></div>
-                <i class="fa fa-arrow-right"></i>
-            </a>
+      </div>
+      <div class="contact-right fade-up">
+        <h3 style="font-size:1.35rem;font-weight:800;color:var(--dark);margin-bottom:16px;line-height:1.3;">Hiring, collaborating, or just want to say hi?</h3>
+        <p>I'm actively looking for <span class="hl">internship opportunities</span> and <span class="hl">junior DevOps roles</span> where I can do real work and grow alongside people who know more than me.</p>
+        <p>I'm not looking to just fill a seat. I want to build things, ask questions, figure out why something broke, and come out a better engineer every week. If that fits what you need, let's talk.</p>
+        <div class="checklist">
+          <div class="ck"><i class="bi bi-check-circle-fill"></i>Open to internships and junior DevOps roles</div>
+          <div class="ck"><i class="bi bi-check-circle-fill"></i>Remote or Cameroon-based positions</div>
+          <div class="ck"><i class="bi bi-check-circle-fill"></i>Available for project collaborations</div>
+          <div class="ck"><i class="bi bi-check-circle-fill"></i>Joining DevOps Micro Internship Cohort 3, June 2026</div>
+          <div class="ck"><i class="bi bi-check-circle-fill"></i>Responds within 24 hours</div>
         </div>
+        <div class="contact-ctas">
+          <a href="mailto:njiariana@gmail.com" class="btn btn-primary btn-lg"><i class="bi bi-envelope"></i> Send an Email</a>
+          <a href="https://wa.me/237671852602" class="btn btn-outline btn-lg" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp Me</a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    <p>&copy; 2026 Nji Ariane Ruth — Junior DevOps Engineer</p>
-    <div class="footer-socials">
-        <a href="mailto:njiariana@gmail.com"><i class="fa fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/nji-ariane-ruth-494805172" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/njiariane" target="_blank"><i class="fab fa-github"></i></a>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Nji Menyonga <span>Ariane Ruth</span></div>
+      <div class="footer-sub">Junior DevOps Engineer · NextGen Playground · Cohort 3 · Cameroon</div>
     </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/nji-ariane-ruth-494805172" class="flink" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/NjiAriane" class="flink" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="mailto:njiariana@gmail.com" class="flink"><i class="bi bi-envelope"></i></a>
+      <a href="https://wa.me/237671852602" class="flink" target="_blank"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <div class="footer-copy">© 2026 Nji Menyonga Ariane Ruth · Cameroon 🇨🇲</div>
+  </div>
 </footer>
 
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20);
+});
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+document.addEventListener('click',(e)=>{
+  const mm=document.getElementById('mobileMenu');
+  if(mm.classList.contains('open')&&!mm.contains(e.target)&&!e.target.closest('.hamburger')) mm.classList.remove('open');
+});
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.1});
+document.querySelectorAll('.fade-up,.tl-item,.project-card').forEach(el=>io.observe(el));
+document.querySelectorAll('.project-card').forEach((c,i)=>c.style.transitionDelay=`${i*0.08}s`);
+const sections=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-90) cur=s.id;});
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.classList.toggle('active',a.getAttribute('href')==='#'+cur);
+  });
+});
+</script>
 </body>
 </html>
