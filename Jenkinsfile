@@ -1,11 +1,9 @@
 pipeline {
     agent any
-
     environment {
         IMAGE_NAME = "ariana1/my-portfolio-pipeline"
         IMAGE_TAG  = "build-${BUILD_NUMBER}"
     }
-
     stages {
         stage('Checkout') {
             steps {
@@ -38,16 +36,17 @@ pipeline {
             }
         }
     }
-
     post {
         always {
             sh 'docker logout || true'
         }
         success {
             echo 'Pipeline completed successfully!'
+            slackSend(channel: 'jenkins-builds', color: 'good', message: "✅ Build #${env.BUILD_NUMBER} succeeded - ${env.JOB_NAME}")
         }
         failure {
             echo 'Pipeline failed.'
+            slackSend(channel: 'jenkins-builds', color: 'danger', message: "❌ Build #${env.BUILD_NUMBER} failed - ${env.JOB_NAME}")
         }
     }
 }
